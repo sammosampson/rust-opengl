@@ -1,0 +1,20 @@
+[package]
+name = "rust-opengl"
+version = "0.1.0"
+authors = ["sammosampson <sammosampson@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[build-dependencies]
+walkdir = "2.1"
+
+[dependencies]
+sdl2 = { version = "0.31.0", features = ["bundled", "static-link"] }
+failure = "0.1"
+gl = { path = "lib/gl" }
+render_gl_derive = { path = "render_gl_derive" }
+vec-2-10-10-10 = "0.1.2"
+image = "0.23.12"
+
+[features]
+gl_debug = ["gl/debug"]
